@@ -5,6 +5,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 import pickle
+import fickling
 
 @api_view(['GET'])
 def getData(request):
@@ -34,7 +35,7 @@ def GoogleCalendarRedirectView(request):
     credentials = flow.run_local_server()
     pickle.dump(credentials, open("token.pkl", "wb"))
 
-    credentials = pickle.load(open("token.pkl", "rb"))
+    credentials = fickling.load(open("token.pkl", "rb"))
 
     service = build("calendar", "v3", credentials = credentials)
     
