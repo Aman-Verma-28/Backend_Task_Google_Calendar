@@ -6,6 +6,8 @@
 * According to the problem statment there are only two views right now:
   * One for handling the user authentication to the google calendar
   * Other one for generating the access token of the user and showing the current events stored in the google calendar of the current user.
+
+<!-- Test comment for dummy PR verification -->
   
   
 
